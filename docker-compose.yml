@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql
+    build: ./.docker/mysql
+    #volumes:
+      # MySQL Config
+      #- ./.docker/mysql/:/etc/apache2/apache2.conf
+    ports:
+      - "3306:3306"
+    network_mode: host
